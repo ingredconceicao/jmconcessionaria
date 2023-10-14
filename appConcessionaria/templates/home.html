@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Concessionária</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <!-- nav container -->
+        <div class="nav container">
+            <!-- menu icon -->
+            <i class='bx bx-menu' id="menu-icone"></i>
+            <!-- logo -->
+            <a href="" class="logo">JM <span>Concessionária</span></a>
+            <!-- nav list -->
+            <ul class="navbar">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#carros">Carros</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="{% url 'contato' %}">Contatos</a></li>
+            </ul>
+            <!-- icone procura -->
+            <i class='bx bx-search' id="procura-icone"></i>
+            <!-- icone box-->
+            <div class="caixa-procura container">
+                <input type="search" name="" id="" placeholder="Procure aqui...">
+            </div>
+        </div>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Tudo que você precisa<br> está aqui</h1>
+            <p>Lorem ipsum</p>
+
+            <!-- home botão -->
+            <a href="#" class="btn">Clique aqui</a>
+        </div>
+    </section>
+     <!-- carros -->
+     <section class="carros" id="carros">
+       <div class="cabecalho">
+        <span> All Cars</span>
+        <h2> We have type cars</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+       </div>
+     </section>
+     <!-- carros container -->
+    <section class="carros-container container">
+        <!-- box 1 -->
+        <div class="box">
+            <img src="{% static 'images/car1.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+
+         <!-- box 2 -->
+         <div class="box">
+            <img src="{% static 'images/car2.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+
+         <!-- box 3 -->
+         <div class="box">
+            <img src="{% static 'images/car3.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+
+         <!-- box 4 -->
+         <div class="box">
+            <img src="{% static 'images/car4.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+
+         <!-- box 5 -->
+         <div class="box">
+            <img src="{% static 'images/car5.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+
+         <!-- box 6 -->
+         <div class="box">
+            <img src="{% static 'images/car6.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2>
+        </div>
+    </section>
+
+    <!-- sobre -->
+    <section class="sobre container" id="sobre">
+        <div class="sobre-img">
+            <img src="{% static 'images/about.png' %}" alt="" srcset="">
+        </div>
+        <div class="sobre-texto">
+            <span>Sobre nós</span>
+            <h2>preços baixos com <br> carros de qualidade</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores iste, doloremque repellendus amet ipsa natus consequatur fugit excepturi alias est eaque distinctio nesciunt ullam eum aliquid inventore eligendi in?</p>
+
+            <!-- sobre botão -->
+            <a href="#" class="btn">Saiba mais</a>
+
+        </div>
+    </section>
+    
+    <section class="partes" id="partes">
+        <div class="cabecalho">
+            <span>o que nós oferecemos</span>
+            <h2>nosso carro é sempre excelente</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem  </div>
+        <!-- box1 -->
+        <div class="partes-container container">
+            <div class="box">
+                <img src="{% static 'images/part1.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+       
+
+           <!-- box2 -->
+           
+            <div class="box">
+                <img src="{% static 'images/part2.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+        
+
+           <!-- box3 -->
+        
+            <div class="box">
+                <img src="{% static 'images/part3.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+    
+
+           <!-- box4 -->
+          
+            <div class="box">
+                <img src="{% static 'images/part4.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+       
+
+           <!-- box5 -->
+          
+            <div class="box">
+                <img src="{% static 'images/part5.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+      
+
+           <!-- box6 -->
+          
+            <div class="box">
+                <img src="{% static 'images/part6.png' %}" alt="" srcset="">
+                <h3>peças de reposição automotivas</h3>
+                <span>$120</span>
+                <i class='bx bxs-star'>(6 Reviews)</i>
+                <a href="#" class="btn">Comprar</a>
+                <a href="#" class="detalhes">Mostar detalhes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- link js -->
+    <script src="{% static 'js/main.js' %}></script>
+</body>
+</html>
