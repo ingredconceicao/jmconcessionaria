@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 *{
@@ -59,7 +60,7 @@ header{
 }
 
 .logo{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-color);
 }
@@ -86,8 +87,15 @@ header{
 }
 
 #procura-icone{
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
+    color: #dba511;
+}
+
+#icone-usuario{
+    font-size: 30px;
+    cursor: pointer;
+    color: #dba511;
 }
 
 .caixa-procura{
@@ -101,6 +109,15 @@ border: 1px solid var(--main-color);
 border-radius: 0.5rem;
 clip-path: circle(0% at 100% 0%);
 }
+
+.caixa-procura form {
+    
+    display: flex;
+    border-radius: 50px;
+    background-color: #4c4c4c;
+    height: 45px;
+}
+
 
 .caixa-procura .active{
     clip-path: circle(144% at 100% 0%);
@@ -119,8 +136,8 @@ clip-path: circle(0% at 100% 0%);
 .home{
     max-width: 1600px;
     margin: auto;
-    width: 150%;
-    min-height: 640px;
+    width: 180%;
+    min-height: 800px;
     display: flex;
     align-items: center;
     background: url(/static/images/Background-home.png);
@@ -148,6 +165,7 @@ clip-path: circle(0% at 100% 0%);
 }
 
 .btn{
+    padding-top: 20px;
     padding: 10px 22px;
     background:#ad0420;
     color:#fffefe;
@@ -258,7 +276,7 @@ clip-path: circle(0% at 100% 0%);
     border-radius: 0.5rem;
 }
 
-.partes-conatiner  .box img{
+.partes-container  .box img{
     width: 100%;
     height: 150px;
     object-fit: contain;
@@ -295,3 +313,57 @@ clip-path: circle(0% at 100% 0%);
     font-size: 1rem;
     color: var(--bg-color);
 }
+
+.footer{
+    background: black;
+    color: #f6f6f6;
+    border-top: 2px solid var(--bg-color);
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo{
+    color: #f6f6f6;
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.social a{
+    font-size: 24px;
+    color: white;
+    margin-right: 1rem;
+}
+
+.social a:hover{
+    color: #8b8b8b;
+}
+
+
+.footer-box h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a{
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+
+.footer-box a:hover{
+    color: #f6f6f6;
+}
+

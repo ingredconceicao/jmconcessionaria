@@ -1,14 +1,13 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JM Concessionária</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <!-- box icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- navbar -->
@@ -24,7 +23,7 @@
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#carros">Carros</a></li>
                 <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="{% url 'contato' %}">Contatos</a></li>
+                <li><a href="#{% url 'contato' %}">Contatos</a></li>
             </ul>
             <!-- icone procura -->
             <i class='bx bx-search' id="procura-icone"></i>
@@ -32,6 +31,16 @@
             <div class="caixa-procura container">
                 <input type="search" name="" id="" placeholder="Procure aqui...">
             </div>
+
+            <!-- Icone usuario -->
+        <li>
+            <a href=".{% url 'login' %}">
+            <i class='bx bxs-user' id="icone-usuario"></i>
+            
+        </a>
+        </li>
+            
+            </i>
         </div>
     </header>
 
@@ -39,10 +48,10 @@
     <section class="home" id="home">
         <div class="home-text">
             <h1>Tudo que você precisa<br> está aqui</h1>
-            <p>Lorem ipsum</p>
+            <p></p>
 
             <!-- home botão -->
-            <a href="#" class="btn">Clique aqui</a>
+            <a href="#carros" class="btn">Clique aqui</a>
         </div>
     </section>
      <!-- carros -->
@@ -111,7 +120,7 @@
     <section class="partes" id="partes">
         <div class="cabecalho">
             <span>o que nós oferecemos</span>
-            <h2>nosso carro é sempre excelente</h2>
+            <h2> nossos carros são exelentes</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem  </div>
         <!-- box1 -->
         <div class="partes-container container">
@@ -186,7 +195,34 @@
         </div>
     </section>
 
+    <!-- footer -->
+
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">JM <span>Concessionária</span></a>
+                <div class="social">
+                    <a href=""><i class='bx bxl-facebook-square'></i></a>
+                    <a href=""><i class='bx bxl-twitter'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-box" id="contato">
+                <h3>Contatos</h3>
+                <i class='bx bxl-whatsapp'> <p> (75) 99999-7888</p></i>
+            </div>
+
+            <div class="footer-box">
+                <h3>Ajuda</h3>
+                <a href="">Fale conosco</a>
+                <a href="">Politica de privacidade</a>
+            </div>
+        </div>
+    </section>
+
     <!-- link js -->
-    <script src="{% static 'js/main.js' %}></script>
+    <script src="{% static 'js/home.js' %}"></script>
 </body>
 </html>
+
+    <!-- <li><a href="{% url 'contato' %}">Contatos</a></li> -->
