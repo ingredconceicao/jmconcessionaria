@@ -74,11 +74,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'projectConcessionaria.wsgi.application'
 
 
-# Database
+'''DATABASE:'''
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-
-
 usuario = getpass.getuser()
 
 print (f'seu nome de usuario é {usuario}')
@@ -113,6 +110,18 @@ elif usuario == 'ALUNO':
             'NAME': 'db_concessionaria',
             'USER': 'root',
             'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '3306',
+
+        }
+    }
+elif usuario == 'Windows':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'db_concessionaria',
+            'USER': 'root',
+            'PASSWORD': 'root',
             'HOST': 'localhost',
             'PORT': '3306',
 
