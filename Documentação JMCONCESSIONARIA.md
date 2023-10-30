@@ -26,6 +26,37 @@ pip install django whitenoise gunicorn django-bootstrap4 PyMySQL django-stdimage
 python manage.py runserver
 ```
 De inicio o sistema irá dar erro porém apresentará o nome de usuario do seu computador da seguinte forma: 
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/35fd265a-742d-4685-a87f-ceca1b6e0073)
+
+**2.2** Copie este nome de usuário. abra a pasta **projectConcessionaria** e procure o arquivo **settings.py**
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/90ebb7d2-66bb-491b-a9b7-eb5fd6b5942e)
+
+**2.3** Procure o local onde é feio  a configuração do DATABASE:
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/2b46b96f-1375-47aa-9690-f19382caf968)
+
+**2.4** Crie um novo elif utilizando o nome de usuario disponibilizado anteriormente, altere o 'USER' e 'PASSWORD' de acordo a configuração do 
+seu MySQL:
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/0c9fa691-c4d3-41bb-a8a5-3d142fa61f1d)  
+
+**2.5** Após isso abra o seu Mysql acesso a conexão que foi adicionada na configuração do Elif.
+
+**2.6** Crie o novo banco de dados chamado **db_concessionaria**
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/afb4130e-11bb-47b3-b472-42aa3adb78fd)
+
+
+**2.7** Após isso volte ao  terminal do Django e utilize o seguinte comando para exportar as tabelas do Django para o MySQL:
+```python
+python manage.py migrate
+```
+
+**2.8** Após isso execute o sistema normalmente utilizando: 
+```python
+python manage.py runserver
+```
+
+
+
+
 
       
       
