@@ -45,6 +45,12 @@ header{
     z-index: 100;
 }
 
+header.shadow{
+    background: #f6f6f6;
+    box-shadow: 4px 4px 20px rgb(15 54 55/20%);
+    transition: 0.5s ease;
+}
+
 .nav{
     display: flex;
     align-items: center;
@@ -86,10 +92,55 @@ header{
     border-bottom: 3px solid var(--main-color);
 }
 
-#procura-icone{
-    font-size: 30px;
+.search-box{
+    position: absolute;
+    top: 65%;
+    left: 75%;
+    transform: translate(-65%, -75%);
+    background: transparent;
+    height: 40px;
+    padding: 10px;
+    border-radius:50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #f6f6f6;
+    font-size: 15px;
+    line-height: 40px;
+    width: 0;
+    transition: .2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+
+.search-box:hover > .search-txt{
+    width: 710px;
+    padding: 0 6px;
     cursor: pointer;
-    color: #dba511;
+    background: #f6f6f6;
+}
+
+.search-box:hover > .search-btn{
+    background: #f6f6f6;
 }
 
 #icone-usuario{
@@ -98,40 +149,13 @@ header{
     color: #dba511;
 }
 
-.caixa-procura{
-position: absolute;
-top: 110%;
-right: 0;
-left: 0;
-background-color:transparent;
-box-shadow: 4px 4px 20px rgb(15 54 55/ 10%);
-border: 1px solid var(--main-color);
-border-radius: 0.5rem;
-clip-path: circle(0% at 100% 0%);
-}
-
-.caixa-procura form {
-    
-    display: flex;
-    border-radius: 50px;
-    background-color: #4c4c4c;
-    height: 45px;
+#icone-vendedor{
+    font-size: 30px;
+    cursor: pointer;
+    color: #dba511;
 }
 
 
-.caixa-procura .active{
-    clip-path: circle(144% at 100% 0%);
-    transition: 0.4s;
-}
-
-.caixa-procura input{
-    width: 100%;
-    padding: 20px;
-   border: none;
-   outline: none;
-   background: transparent;
-   font-size: 1rem;
-}
 
 .home{
     max-width: 1600px;

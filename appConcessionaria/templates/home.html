@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JM Concessionária</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+       <!-- link js -->
+    
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -25,11 +28,12 @@
                 <li><a href="#sobre">Sobre nós</a></li>
                 <li><a href="{% url 'contato' %}">Contatos</a></li>
             </ul>
-            <!-- icone procura -->
-            <i class='bx bx-search' id="procura-icone"></i>
-            <!-- icone box-->
-            <div class="caixa-procura container">
-                <input type="search" name="" id="" placeholder="Procure aqui...">
+
+            <div class="search-box">
+                <input type="search" class="search-txt" placeholder="Procure aqui...">
+                <a href="#" class="search-btn">
+                    <img src="{% static 'images/icons8-search.svg' %}" alt="lupa" height="30" width="30">
+                </a>
             </div>
 
             <!-- Icone usuario -->
@@ -39,6 +43,14 @@
             
         </a>
         </li>
+
+            <!-- Icone vendedor -->
+            <li>
+                <a href=".{% url 'login' %}">
+                <i class='bx bxs-user' id="icone-vendedor"></i>
+                
+            </a>
+            </li>
             
             </i>
         </div>
@@ -220,9 +232,9 @@
         </div>
     </section>
 
-    <!-- link js -->
-    <script src="{% static 'js/home.js' %}"></script>
+ 
 </body>
 </html>
+ <script src="{% static 'js/home.js' %}"></script>
 
     <!-- <li><a href="{% url 'contato' %}">Contatos</a></li> -->

@@ -106,6 +106,18 @@ elif usuario == 'bewtr':
 
         }
     }
+elif usuario == 'ALUNO':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'db_concessionaria',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '3306',
+
+        }
+    }
 else:
     DATABASES = {
         'default': {
