@@ -5,10 +5,11 @@
 e também as **Aplicações (Estrururas plugáveis que formam o sistema**. Com isso é possivel criar um só projeto e inserir varias aplicações*
 
 **1. Intalação de recursos**
+
      **1.1** Ao clonar o repositorio e adiciona-lo na IDE, abra o terminal *Prompt Command* e insira o comando para ativar a Venv do JMCONCESSIONARIA
-     
-     ``python
-     .\venv\Scripts\activate 
-     ``
+         ```python
+          .\venv\Scripts\activate
+          ```
+          
       
       
