@@ -7,3 +7,9 @@ document.querySelector('#procura-icone').onclick = () => {
 function alerta(){
     alert('Bem vindooo')
 }
+
+let header = document.querySelector('header');
+
+window.addEventListener('scroll' , () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
