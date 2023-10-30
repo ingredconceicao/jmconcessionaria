@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os.path
 from pathlib import Path
-
+import getpass 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,17 +77,47 @@ WSGI_APPLICATION = 'projectConcessionaria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'concessionariabd',
-        'USER': 'concessionaria',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
 
+
+usuario = getpass.getuser()
+
+print (f'seu nome de usuario é {usuario}')
+if usuario == 'Thiago':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'db_concessionaria',
+            'USER': 'root',
+            'PASSWORD': 'TNBS2020',
+            'HOST': 'localhost',
+            'PORT': '3306',
+
+        }
     }
-}
+elif usuario == 'bewtr':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'concessionariabd',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '3306',
+
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'db_concessionaria',
+            'USER': 'root',
+            'PASSWORD': 'TNBS2020',
+            'HOST': 'localhost',
+            'PORT': '3306',
+
+        }
+    }
 
 
 # Password validation
