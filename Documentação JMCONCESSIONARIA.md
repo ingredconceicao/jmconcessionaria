@@ -6,10 +6,10 @@ e também as **Aplicações (Estrururas plugáveis que formam o sistema**. Com i
 
 **1. Intalação de recursos**
 
-     **1.1** Ao clonar o repositorio e adiciona-lo na IDE, abra o terminal *Prompt Command* e insira o comando para ativar a Venv do JMCONCESSIONARIA
-         ```python
-          .\venv\Scripts\activate
-          ```
-          
+**1.1** Ao clonar o repositorio e adiciona-lo na IDE, abra o terminal *Prompt Command* e insira o comando para ativar a Venv do JMCONCESSIONARIA
+```python
+.\venv\Scripts\activate
+```
+      
       
       
