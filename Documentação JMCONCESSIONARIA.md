@@ -31,7 +31,7 @@ De inicio o sistema irá dar erro porém apresentará o nome de usuario do seu c
 ![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/35fd265a-742d-4685-a87f-ceca1b6e0073)
 
 
-**2.2** Copie este nome de usuário. abra a pasta **projectConcessionaria** e procure o arquivo **settings.py**
+**2.2** Copie este nome de usuário, abra a pasta **projectConcessionaria** e procure o arquivo **settings.py**
 
 ![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/90ebb7d2-66bb-491b-a9b7-eb5fd6b5942e)
 
@@ -59,6 +59,9 @@ seu MySQL:
 ```python
 python manage.py migrate
 ```
+
+![image](https://github.com/ingredconceicao/jmconcessionaria/assets/111439073/7bf1848f-ea46-41e1-8b15-071ae8853711)
+
 
 **2.8** Após isso execute o sistema normalmente utilizando: 
 ```python
