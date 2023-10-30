@@ -11,21 +11,20 @@ class ContatoForm(forms.Form):
     assunto = forms.CharField(label='assunto', max_length=100)
     descricao = forms.CharField(label='descricao', widget=forms.Textarea())
 
-    def send_mail(self):
-        nome = self.cleaned_data['nome']
-        telefone = self.cleaned_data['telefone']
-        email = self.cleaned_data['email']
-        assunto = self.cleaned_data['assunto']
-        descricao = self.cleaned_data['descricao']
+    # def enviar_email(self):
+    #     nome = self.cleaned_data['nome']
+    #     email = self.cleaned_data['email']
+    #     assunto = self.cleaned_data['assunto']
+    #     descricao = self.cleaned_data['descricao']
 
-        conteudo = f'Mensagem recebida de {nome}\n E-mail : {email}\n Assunto: {assunto} Descrição: {descricao}'
+    #     conteudo = f'Nome: {nome}\nE-mail: {email}\nAssunto: {assunto}\n Descrição: {descricao}'
 
-        mail = EmailMessage(
-            subject = assunto,
-            body=conteudo,
-            from_email='contato@seudominio.com.br',
-            to=['contato@seudominio.com.br',],
-            headers= {'Reply-To':email}
-        )
-        mail.send() #Pega as configs do settings para disparar o email
-         
+    #     mail = EmailMessage(
+    #         subject='E-mail enviado com sucesso.',
+    #         body=conteudo,
+    #         from_email='contato@seudominio.com.br',
+    #         to=['contato@seudominio.com.br',],
+    #         headers={'Reply-To': email}  
+
+    #     )
+    #     mail.send()

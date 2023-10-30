@@ -14,16 +14,25 @@ def contato(request):
     form = ContatoForm(request.POST or None)
 
     if str(request.method) == 'POST' :
-        form.is_valid()  
-        if form.errors:  
-            messages.error(request, 'Operação falhou. Corrija os erros no formulário.')
-        else:
-            form.send_mail()  
-            messages.success(request, 'Operação efetuada com sucesso.')
+        if form.is_valid():
+            nome = form.cleaned_data['nome']
+            email = form.cleaned_data['email']
+            assunto = form.cleaned_data['assunto']
+            descricao = form.cleaned_data['descricao']
+
+            print('Mensagem enviada')
+            print(f'Nome: {nome}')
+            print(f'Nome: {email}')
+            print(f'Nome: {assunto}')
+            print(f'Nome: {descricao}')
+
+            messages.success(request='Email enviado com sucesso!')
             form = ContatoForm()
+        else: 
+            messages.error(request,'Erro ao enviar o E-mail')
 
     context = {
-        'form':form
+        'form': form
     }
     return render(request, 'contato.html', context)
 
