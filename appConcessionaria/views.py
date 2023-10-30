@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .forms import CadastroForm
+from django.contrib import messages
+from .forms import ContatoForm
 # Create your views here.
 
 def home(request):
@@ -9,15 +10,26 @@ def carros(request):
     return render(request, 'carros.html')
 
 def contato(request):
-    return render(request, 'contato.html')
+
+    form = ContatoForm(request.POST or None)
+
+    if str(request.method) == 'POST' :
+        form.is_valid()  
+        if form.errors:  
+            messages.error(request, 'Operação falhou. Corrija os erros no formulário.')
+        else:
+            form.send_mail()  
+            messages.success(request, 'Operação efetuada com sucesso.')
+            form = ContatoForm()
+
+    context = {
+        'form':form
+    }
+    return render(request, 'contato.html', context)
 
 def login(request):
     return render(request, 'login.html')
 
 def cadastro(request):
-    form = CadastroForm()
-    context = {
-        'form': form
-        }
-    
-    return render(request, 'cadastro.html', context)
+     
+    return render(request, 'cadastro.html')
