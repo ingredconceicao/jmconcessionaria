@@ -44,28 +44,21 @@ def cadastro(request):
      
     return render(request, 'cadastro.html')
 
-def perfil_vendedor(request):
+def perfil(request):
     if str(request.method) == 'POST':
         form = VeiculoModelForm(request.POST, request.FILES)
         if form.is_valid():
-            perf = form.save(commit=False)
-
-            print(f'Marca {marca}')
-            print(f'Modelo {modelo}')
-            print(f'quilometragem {quilometragem}' )
-            print(f'valor {valor}' )
-            print(f'ano {ano}' )
-            print(f'estoque {estoque}')
-            print(f'condicao {condicao}' )
-            print(f'imagem {imagem}')
-
+            form.save()
             messages.success(request, 'Veiculo cadastrado com Sucesso!')
+            form = VeiculoModelForm()
+
 
         else:
             messages.error(request, 'veiculo Não cadastrado.') 
-
-        context = {
-            'form': form
-        }       
-        return render(request, 'perfil_vendedor.html', context)
+    else:
+        form = VeiculoModelForm()
+    context = {
+        'form': form
+    }       
+    return render(request, 'perfil_vendedor.html', context)
 
