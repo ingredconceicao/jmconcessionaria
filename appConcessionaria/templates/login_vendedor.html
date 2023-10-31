@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/appConcessionaria/static/css/login_vendedor.css">
+   <title>Login Vendedor </title>
+</head>
+<body>
+   <div class="login-container">
+      <form action="" class="form-login">
+          <ul class="login-nav">
+              <li class="login-nav__item active">
+                  <a href="#">Login Vendedor </a>
+              </li>
+              
+          </ul>
+          <label for="login-input-user" class="login__label">
+              Email
+          </label>
+          <input id="login-input-user" class="login__input" type="text" />
+          <label for="login-input-password" class="login__label">
+              Senha
+          </label>
+          <input id="login-input-password" class="login__input" type="password" />
+          <label for="login-sign-up" class="login__label--checkbox">
+              <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+              Manter conectado
+          </label>
+          <button class="login__submit" disabled>Login</button>
+      </form>
+      <a href="#" class="login__forgot">Esqueceu a senha?</a>
+      <a href="{% url 'cadastro' %}" class="login__forgot">Cadastre-se</a>
+  </div>
+</body>
+</html>
