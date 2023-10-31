@@ -2,7 +2,7 @@ from typing import Any
 from django import forms
 from django.core.mail.message import EmailMessage
 
-
+from .models import Veiculo
 class ContatoForm(forms.Form):
 
     nome = forms.CharField(label='nome', max_length=100)
@@ -28,3 +28,8 @@ class ContatoForm(forms.Form):
 
     #     )
     #     mail.send()
+
+class  VeiculoModelForm(forms.ModelForm):
+    class Meta:
+        model = Veiculo
+        fields =  ['marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao', 'imagem']
