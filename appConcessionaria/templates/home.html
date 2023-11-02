@@ -7,8 +7,9 @@
     <title>JM Concessionária</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
+
        <!-- link js -->
-    
+   
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -29,6 +30,7 @@
                 <li><a href="{% url 'contato' %}">Contatos</a></li>
             </ul>
 
+
             <div class="search-box">
                 <input type="search" class="search-txt" placeholder="Procure aqui...">
                 <a href="#" class="search-btn">
@@ -36,31 +38,35 @@
                 </a>
             </div>
 
+
             <!-- Icone usuario -->
         <li>
             <a href=".{% url 'login' %}">
             <i class='bx bxs-user' id="icone-usuario"></i>
-            
+           
         </a>
         </li>
 
-            <!-- Icone vendedor -->
+
+            <!-- Icone vendedor
             <li>
                 <a href=".{% url 'login' %}">
                 <i class='bx bxs-user' id="icone-vendedor"></i>
-                
+               
             </a>
             </li>
-            
-            </i>
+           
+            </i> -->
         </div>
     </header>
+
 
     <!-- home -->
     <section class="home" id="home">
         <div class="home-text">
             <h1>Tudo que você precisa<br> está aqui</h1>
             <p></p>
+
 
             <!-- home botão -->
             <a href="#carros" class="btn">Clique aqui</a>
@@ -82,11 +88,13 @@
             <h2>Porche</h2>
         </div>
 
+
          <!-- box 2 -->
          <div class="box">
             <img src="{% static 'images/car2.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
         </div>
+
 
          <!-- box 3 -->
          <div class="box">
@@ -94,11 +102,13 @@
             <h2>Porche</h2>
         </div>
 
+
          <!-- box 4 -->
          <div class="box">
             <img src="{% static 'images/car4.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
         </div>
+
 
          <!-- box 5 -->
          <div class="box">
@@ -106,12 +116,14 @@
             <h2>Porche</h2>
         </div>
 
+
          <!-- box 6 -->
          <div class="box">
             <img src="{% static 'images/car6.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
         </div>
     </section>
+
 
     <!-- sobre -->
     <section class="sobre container" id="sobre">
@@ -123,12 +135,14 @@
             <h2>preços baixos com <br> carros de qualidade</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores iste, doloremque repellendus amet ipsa natus consequatur fugit excepturi alias est eaque distinctio nesciunt ullam eum aliquid inventore eligendi in?</p>
 
+
             <!-- sobre botão -->
             <a href="#" class="btn">Saiba mais</a>
 
+
         </div>
     </section>
-    
+   
     <section class="partes" id="partes">
         <div class="cabecalho">
             <span>o que nós oferecemos</span>
@@ -146,6 +160,7 @@
             </div>
        
 
+
            <!-- box2 -->
            
             <div class="box">
@@ -156,10 +171,11 @@
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
             </div>
-        
+       
+
 
            <!-- box3 -->
-        
+       
             <div class="box">
                 <img src="{% static 'images/part3.png' %}" alt="" srcset="">
                 <h3>peças de reposição automotivas</h3>
@@ -168,10 +184,11 @@
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
             </div>
-    
+   
+
 
            <!-- box4 -->
-          
+         
             <div class="box">
                 <img src="{% static 'images/part4.png' %}" alt="" srcset="">
                 <h3>peças de reposição automotivas</h3>
@@ -182,8 +199,9 @@
             </div>
        
 
+
            <!-- box5 -->
-          
+         
             <div class="box">
                 <img src="{% static 'images/part5.png' %}" alt="" srcset="">
                 <h3>peças de reposição automotivas</h3>
@@ -192,10 +210,11 @@
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
             </div>
-      
+     
+
 
            <!-- box6 -->
-          
+         
             <div class="box">
                 <img src="{% static 'images/part6.png' %}" alt="" srcset="">
                 <h3>peças de reposição automotivas</h3>
@@ -207,7 +226,9 @@
         </div>
     </section>
 
+
     <!-- footer -->
+
 
     <section class="footer">
         <div class="footer-container container">
@@ -221,8 +242,10 @@
             </div>
             <div class="footer-box" id="contato">
                 <h3>Contatos</h3>
-                <i class='bx bxl-whatsapp'> <p> (75) 99999-7888</p></i>
+                <p> (75) 99999-7888</p></i>
+                <p> (75) 99999-7888</p></i>
             </div>
+
 
             <div class="footer-box">
                 <h3>Ajuda</h3>
@@ -232,9 +255,11 @@
         </div>
     </section>
 
+
  
 </body>
 </html>
- <script src="{% static 'js/home.js' %}"></script>
 
+
+<script src="{% static 'js/home.js' %}"></script>
     <!-- <li><a href="{% url 'contato' %}">Contatos</a></li> -->

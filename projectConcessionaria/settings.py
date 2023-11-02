@@ -130,18 +130,20 @@ elif usuario == 'Windows':
 
         }
     }
-else:
+
+elif usuario == 'sdmei':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'db_concessionaria',
             'USER': 'root',
-            'PASSWORD': 'TNBS2020',
+            'PASSWORD': '1234',
             'HOST': 'localhost',
             'PORT': '3306',
 
         }
     }
+
 
 
 # Password validation

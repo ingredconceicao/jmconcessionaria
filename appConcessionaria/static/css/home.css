@@ -149,11 +149,6 @@ header.shadow{
     color: #dba511;
 }
 
-#icone-vendedor{
-    font-size: 30px;
-    cursor: pointer;
-    color: #dba511;
-}
 
 
 
@@ -338,7 +333,7 @@ header.shadow{
     color: var(--bg-color);
 }
 
-.footer{
+footer{
     background: black;
     color: #f6f6f6;
     border-top: 2px solid var(--bg-color);
@@ -391,3 +386,6 @@ header.shadow{
     color: #f6f6f6;
 }
 
+.bxl-whatsapp{
+    flex-direction: column;
+}
