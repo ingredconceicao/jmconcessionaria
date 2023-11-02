@@ -69,3 +69,6 @@ def perfil(request):
     }       
     return render(request, 'perfil_vendedor.html', context)
 
+def loginVendedor(request):
+     
+    return render(request, 'login_f.html')
