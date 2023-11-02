@@ -106,7 +106,10 @@ header.shadow{
     align-items: center;
     
 }
-
+.img-card{
+    width: 10vw;
+    height: 10vh;
+}
 .search-txt{
     border: none;
     background: none;

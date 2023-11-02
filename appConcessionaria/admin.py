@@ -4,5 +4,15 @@ from .models import Veiculo
 
 @admin.register(Veiculo)
 class VeiculoAdmin(admin.ModelAdmin):
-    list_display = ('marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao', 'imagem', 'slug', 'postado', 'modificado', 'disponivel')
-
+    list_display = (
+        "marca",
+        "modelo",
+        "quilometragem",
+        "valor",
+        "ano",
+        "estoque",
+        "condicao",
+        "imagem",
+        "slug",
+        "disponivel",
+    )

@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .forms import ContatoForm, VeiculoModelForm
-
+from .models import Veiculo
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'veiculos': Veiculo.objects.all()
+    }
+    return render(request, 'home.html', context)
 
 def carros(request):
     return render(request, 'carros.html')
@@ -47,7 +50,11 @@ def cadastro(request):
 def perfil(request):
     if str(request.method) == 'POST':
         form = VeiculoModelForm(request.POST, request.FILES)
+        print('a')
+        print(form.errors.as_json())
+
         if form.is_valid():
+            print('b')
             form.save()
             messages.success(request, 'Veiculo cadastrado com Sucesso!')
             form = VeiculoModelForm()

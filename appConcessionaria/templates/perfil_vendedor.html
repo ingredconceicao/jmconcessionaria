@@ -1,46 +1,55 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/perfil_vendedor.css' %}">
     <title>PerfilVendedor</title>
 </head>
+
 <body>
     <div class="container">
-      
-        <form action="{% url 'perfil' %}" method="post" class="formPerfil" autocomplete="off" enctype="multipart/form-data">
+
+        <form action="{% url 'perfil' %}" method="post" class="formPerfil" autocomplete="off"
+            enctype="multipart/form-data">
             {% csrf_token %}
             <label for="">marca </label>
-            <input type="text" id="marca"> <br><br>
+            <input type="text" id="marca" name="marca"> <br><br>
             <label for="">modelo</label>
-            <input type="text" id="modelo"> <br><br>
+            <input type="text" id="modelo" name="modelo"> <br><br>
             <label for="">quilometragem </label>
-            <input type="number" id="quilometragem"><br><br>
+            <input type="number" id="quilometragem" name="quilometragem"><br><br>
             <label for="">valor </label>
-            <input type="text" id="valor"><br><br>
+            <input type="text" id="valor" name="valor"><br><br>
             <label for=""> ano </label>
-            <input type="number" id="ano"><br><br>
+            <input type="number" id="ano" name="ano"><br><br>
             <label for=""> estoque </label>
-            <input type="number" id="estoque"> <br><br>
-    
+            <input type="number" id="estoque" name="estoque"> <br><br>
+
             <label for="condicao">Escolha a condição do veículo:</label>
             <select id="condicao" name="condicao">
                 <option value="novo">Novo</option>
                 <option value="semi-novo">Semi-Novo</option>
                 <option value="usado">Usado</option>
             </select>
-    
-            <label for="">Insira um arquivo </label><br><br>
-            <input type="file">
-            <button type="submit"class='btn-primary'> Cadastrar</button>
+            <label for="">O veiculo está disponivel?</label>
+            <label for="" >Sim</label>
+            <input type="checkbox" id="ativo" name="disponivel" value="sim">
+            <label for="inativo">Não</label>
+            <input type="checkbox" id="inativo" name="disponivel" value="nao">
             
-           
+            <label for="">Insira um arquivo </label><br><br>
+            <input type="file" name="imagem">
+            <button type="submit" class='btn-primary'> Cadastrar</button>
+
+
         </form>
-       
-       
+
+
 
     </div>
 </body>
+
 </html>

@@ -32,4 +32,11 @@ class ContatoForm(forms.Form):
 class  VeiculoModelForm(forms.ModelForm):
     class Meta:
         model = Veiculo
-        fields =  ['marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao', 'imagem']
+        fields =  ['marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao','disponivel', 'imagem']
+
+class Usuario(forms.Form):
+
+    nome = forms.CharField(label='nome', max_length=100)
+    cpf = forms.CharField(label='cpf', max_length=100)
+    password = forms.EmailField(label='email', max_length=100)
+    confirmar_passoword = forms.EmailField(label='email', max_length=100)

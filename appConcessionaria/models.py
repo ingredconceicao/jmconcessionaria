@@ -1,5 +1,7 @@
 from django.db import models
 from stdimage.models import StdImageField
+# from django.contrib.auth.models import User
+
 
 '''Signals -> funciona para inserir algo no banco antes ou depois
         '''
@@ -7,9 +9,8 @@ from django.db.models import signals
 from django.template.defaultfilters import slugify
 
 class Base(models.Model):
-        postado = models.DateField('Data de Postagem', auto_now_add=True)
-        modificado = models.DateField('Data de Modificação', auto_created=True)
-        disponivel = models.BooleanField('Ativo?', default=True)
+        # postado = models.DateField('Data de Postagem', auto_now_add=True)
+        disponivel = models.BooleanField('Ativo', default=True)
 
         class Meta: 
                 abstract = True
@@ -37,3 +38,8 @@ class Veiculo(Base):
 def veiculo_pre_save(signal,instance,sender, **kwargs):
         instance.slug = slugify(instance.modelo)
 signals.pre_save.connect(veiculo_pre_save, sender=Veiculo)
+
+# class UserProfile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     cpf = models.CharField(max_length=20)
+#     profile_picture = models.ImageField(upload_to='profile_pictures/')

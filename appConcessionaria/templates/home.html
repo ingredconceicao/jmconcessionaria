@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <header>
+    <header>    
         <!-- nav container -->
         <div class="nav container">
             <!-- menu icon -->
@@ -67,6 +67,20 @@
         </div>
     </section>
      <!-- carros -->
+    
+     <h1>Lista de Veiculos</h1>
+     <div class="card-container">
+        
+        {% for veiculo in veiculos %}
+        <div class="card-item">
+            <h3>{{ veiculo.marca}}  {{ veiculo.modelo }}</h3>
+            <h5>Ano De fabricação: {{ veiculo.ano }}</h5>
+            <h5>Preço : R$ {{ veiculo.valor }}</h5>
+            <img src="{{ veiculo.imagem.url }}" alt=" {{ veiculo.nome }}" class="img-card">
+        </div>
+        {% endfor %}
+     </div>
+
      <section class="carros" id="carros">
        <div class="cabecalho">
         <span> All Cars</span>
