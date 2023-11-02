@@ -44,7 +44,8 @@ h1{
   color: #ffffff
 }
 
-.label-float input{
+
+ input{
   color: white;
 	font-size: 1.15rem;
 	width: 100%;
@@ -54,11 +55,12 @@ h1{
 	border-radius: 1.5rem;
 	background-color: rgba(255, 255, 255, 0.25);
 	letter-spacing: 1px;
+  margin-top: 5rem;
   
 }
 
 .label-float{
-  position: relative;
+ 
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -72,19 +74,24 @@ h1{
 	background-color: transparent;
 }
 
-.label-float label{
-  margin-top: 1.5rem;
+ label{
+  
   color: #f4f3fc;
-  position: absolute;
+
   top: 0;
   left: 0;
   margin-top: 13px;
   transition: all .3s ease-out;
+  width: 50%;
+  margin-bottom: 50px;
+  
 }
+
+
 
 .label-float--checkbox {
 	position: absolute;
-	top: .1rem;
+	top: 0;
 	left: 0;
 	margin: 0;
 }
@@ -92,7 +99,7 @@ h1{
 .label-float input:focus + label,
 .label-float input:valid + label{
   font-size: 13px;
-  margin-top: 0;
+  margin-top: 80px;
   color: #a72525
 }
 
