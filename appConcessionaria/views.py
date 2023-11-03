@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ContatoForm, VeiculoModelForm, CadastroUsuarioForm, LoginUsuarioForm ,User_rigister
+from .forms import ContatoForm, VeiculoModelForm, LoginUsuarioForm ,User_rigister
 from .models import Veiculo
-from django.contrib.auth import login
+from django.contrib.auth import login,authenticate
+
 from django.contrib.auth.models import User
 
 
@@ -12,6 +13,7 @@ def home(request):
     context = {
         'veiculos': Veiculo.objects.all()
     }
+
     return render(request, 'home.html', context)
 
 def carros(request):
@@ -44,22 +46,37 @@ def contato(request):
     }
     return render(request, 'contato.html', context)
 
-def login(request):
-    
+def login_page(request):
+    if str(request.method) == 'POST':
+        cpf = request.POST.get('cpf')
+        print('adasd')
+
+        password = request.POST.get('password')
+        if not cpf or not password:
+            print('adasd')
+            return render(request, 'login.html')
+
+        usuario = authenticate(
+            request, username=cpf, password=password)
+        if not usuario:
+            print('adasd')
+            return render(request, 'login.html')
+
+        login(request, user=usuario)
+        print('adasd')
+        return render(request, 'home.html')
+
+
     
     return render(request, 'login.html')
     
 
 def cadastro(request):
-    form = CadastroUsuarioForm(request.POST)
+    form = User_rigister(request.POST)
     if form.is_valid():
-        nome = request.POST.get('nome')
-        cpf = request.POST.get('cpf')
         senha = request.POST.get('senha')
-        save_usuario = User_rigister
-        save_usuario.set_password(senha) 
-        save_usuario.username = cpf
-        save_usuario.first_name = nome
+        save_usuario = form.save(commit=False)
+        save_usuario.set_password(senha)
         save_usuario.save()
         form.save()
 
@@ -89,6 +106,22 @@ def perfil(request):
     return render(request, 'perfil_vendedor.html', context)
 
 def loginVendedor(request):
+    if str(request.method) == 'POST':
+        email = request.POST.get('email').lower()
+
+        password = request.POST.get('password')
+        if not email or not password:
+            return redirect('homepage:homepage')
+
+        usuario = authenticate(
+            request, username=email, password=password)
+        if not usuario:
+            return redirect('homepage:homepage')
+
+        login(request, user=usuario)
+        return render(request, 'carros.html')
+
+
      
     return render(request, 'login_f.html')
 

@@ -26,7 +26,7 @@ class ContatoForm(forms.Form):
     #         body=conteudo,
     #         from_email='contato@seudominio.com.br',
     #         to=['contato@seudominio.com.br',],
-    #         headers={'Reply-To': email}  
+    #         headers={'Reply-To': email}
 
     #     )
     #     mail.send()
@@ -37,8 +37,9 @@ class  VeiculoModelForm(forms.ModelForm):
         fields =  ['marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao','disponivel', 'imagem']
 
 
-class CadastroUsuarioForm(forms.ModelForm):
 
+
+class User_rigister(forms.ModelForm):
     senha = forms.CharField(
         required=False,
         widget=forms.PasswordInput,
@@ -47,15 +48,10 @@ class CadastroUsuarioForm(forms.ModelForm):
         required=False,
         widget=forms.PasswordInput,
     )
-    class Meta():
-        model = Usuario
-        fields= ('nome', 'cpf', 'senha', 'repetir_senha')
-        
-class User_rigister(forms.ModelForm):
     class Meta:
         required = False
-        model = User   
-        fields = ('username',)
+        model = User
+        fields = ('username','first_name', 'senha', 'repetir_senha')
 class LoginUsuarioForm(forms.Form):
      class Meta:
         model = Usuario
