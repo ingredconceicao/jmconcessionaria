@@ -97,24 +97,6 @@
      <!-- carros container -->
     <section class="carros-container container">
         <!-- box 1 -->
-<<<<<<< HEAD
-        {% for veiculo in veiculos %}
-        <div class="box">
-            <!-- <h3>{{ veiculo.marca}}  {{ veiculo.modelo }}</h3>
-            <h5>Ano De fabricação: {{ veiculo.ano }}</h5>
-            <h5>Preço : R$ {{ veiculo.valor }}</h5>
-             -->
-             <h3> R$ {{ veiculo.valor }}</h3>
-            <img src="{{ veiculo.imagem.url }}" alt=" {{ veiculo.nome }}" class="img-card" >
-            <h2>{{ veiculo.marca}} {{ veiculo.modelo}}</h2>
-
-         
-        </div>
-        {% endfor %}
-        <div class="box">
-            <img src="{% static 'images/car1.jpg' %}" alt="" srcset="">
-            <h2>Porche</h2>
-=======
         <div class="card-container">
            
            {% for veiculo in veiculos %}
@@ -128,7 +110,6 @@
                <h2>{{veiculo.marca}} {{veiculo.modelo}}</h2>
            </div>
            {% endfor %}
->>>>>>> 0c0f11f16cb48a504c5606dd2b2a4aacf1d3cfb8
         </div>
 
 
@@ -208,88 +189,7 @@
         </div>
     </section>
    
-    <section class="partes" id="partes">
-        <div class="cabecalho">
-            <span>O que nós oferecemos</span>
-            <h2> Nossos carros são exelentes</h2>
-            <p>Peças automotivas para reposição </div>
-       <!--box1--> 
-        <div class="partes-container container">
-            <div class="box">
-                <img src="{% static 'images/part1.png' %}" alt="" srcset="">
-                <h3>Peças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
-       
-
-
-           <!-- box2 -->
-           
-            <div class="box">
-                <img src="{% static 'images/part2.png' %}" alt="" srcset="">
-                <h3>Peças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
-       
-
-
-           <!-- box3 -->
-       
-            <div class="box">
-                <img src="{% static 'images/part3.png' %}" alt="" srcset="">
-                <h3><P></P>eças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div> 
-   
-
-
-           <!-- box4 -->
-         
-            <div class="box">
-                <img src="{% static 'images/part4.png' %}" alt="" srcset="">
-                <h3><P></P>eças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div> 
-       
-
-
-           <!-- box5 -->
-          
-            <div class="box">
-                <img src="{% static 'images/part5.png' %}" alt="" srcset="">
-                <h3>Peças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
-     
-
-
-           <!-- box6 -->
-         
-            <div class="box">
-                <img src="{% static 'images/part6.png' %}" alt="" srcset="">
-                <h3>Peças de reposição automotivas</h3>
-                <span>$120</span>
-                <i class='bx bxs-star'>(6 Reviews)</i>
-                <a href="#" class="btn">Comprar</a>
-                <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
-        </div>
-    </section>  
+    
 
 
     <!-- footer -->
