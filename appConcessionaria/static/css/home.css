@@ -26,6 +26,9 @@ img{
     width: 100%;
 }
 
+.h3{
+    background-color: #270101;
+}
 body{
     color: var(--bg-color);
 }
