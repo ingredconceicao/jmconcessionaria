@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
-   margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  
 }
 
 .formContato{
@@ -16,26 +19,50 @@ body{
         width: 100%;
         max-width: 350px;
         min-height: 530px;
-        
+        font-family: 'Roboto', sans-serif;
 }
 
 h1{
     color: white;
+    font-size: 1.5rem;
+    align-items: center;
     margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2rem;
 }
 
-label {
-    color:white;
-    border: none;
+ .label-float {
+    color: white;
+	font-size: 1.15rem;
+	width: 100%;
+	padding: .5rem 1rem;
+	outline: none;
+	border-radius: 1.5rem;
+	letter-spacing: 1px;
+    margin-right: 3rem;
+} 
+
+
+
+ input{
+	font-size: 1.15rem;
+    margin-top: .5rem;
+	width: 100%;
+	padding: .5rem 1rem;
+	border: 2px solid transparent;
+	outline: none;
+	border-radius: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.25);
+	letter-spacing: 1px;
 }
 
-input{
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    text-transform: uppercase;
+textarea{
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-top: 1rem;
 }
+
+
+
 #descricao{
     text-transform: uppercase;
     width: 105%;
@@ -43,18 +70,20 @@ input{
 }
 
 button{
- margin-left: 26%;
- padding: 10px;
- text-align: center;
- justify-content: center;
- border-radius: 10px;
- border: none;
- cursor: pointer;
- background-color: white;
- width: 50%;
- margin-bottom: 50px;
- text-decoration: none;
- text-transform: uppercase;
+    color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block;
+	width: 70%;
+	background-color: #ad0420;
+	border: none;
+	cursor: pointer;
+   margin-left:3.5rem;
 }
 
 button:hover{
