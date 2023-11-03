@@ -74,7 +74,7 @@
     </section>
      <!-- carros -->
     
-     <h1>Lista de Veiculos</h1>
+     <!-- <h1>Lista de Veiculos</h1>
      <div class="card-container">
         
         {% for veiculo in veiculos %}
@@ -85,57 +85,89 @@
             <img src="{{ veiculo.imagem.url }}" alt=" {{ veiculo.nome }}" class="img-card">
         </div>
         {% endfor %}
-     </div>
+     </div> -->
 
      <section class="carros" id="carros">
        <div class="cabecalho">
-        <span> All Cars</span>
-        <h2> We have type cars</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <span> Todos os carros </span>
+        <h2>Temos todos tipos de carros </h2>
+        <p> Confiança e credibilidade em um só lugar. </p>
        </div>
      </section>
      <!-- carros container -->
     <section class="carros-container container">
         <!-- box 1 -->
-        <div class="box">
-            <img src="{% static 'images/car1.jpg' %}" alt="" srcset="">
-            <h2>Porche</h2>
+        <div class="card-container">
+           
+           {% for veiculo in veiculos %}
+           <div class="box">
+<!--             
+               <h3>{{ veiculo.marca}}  {{ veiculo.modelo }}</h3>
+               <h5>Ano De fabricação: {{ veiculo.ano }}</h5>
+               <h5>Preço : R$ {{ veiculo.valor }}</h5> -->
+               <h3>R$ {{veiculo.valor}}</h3>
+               <img src="{{ veiculo.imagem.url }}" alt=" {{ veiculo.nome }}" class="img-car">
+               <h2>{{veiculo.marca}} {{veiculo.modelo}}</h2>
+           </div>
+           {% endfor %}
         </div>
 
 
-         <!-- box 2 -->
-         <div class="box">
-            <img src="{% static 'images/car2.jpg' %}" alt="" srcset="">
+
+        <!-- <div class="box">
+            <img src="{% static 'images/car1.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
+        </div> -->
+
+
+         <!-- box 2 -->
+
+         {% for veiculo in veiculos %}
+         <div class="box">
+             <!-- <h3 class="h3">{{ veiculo.marca}}  {{ veiculo.modelo }}</h3>
+             <h5>Ano De fabricação: {{ veiculo.ano }}</h5>
+             <h5>Preço : R$ {{ veiculo.valor }}</h5> -->
+
+             <h3>R$ {{veiculo.valor}}</h3>
+             <img src="{{ veiculo.imagem.url }}" alt=" {{ veiculo.nome }}" class="img-car">
+             <h2>{{veiculo.marca}} {{veiculo.modelo}}</h2>
+             
+            </div>
+             
+   
+         {% endfor %}
+         <!-- <div class="box">
+            <img src="{% static 'images/car2.jpg' %}" alt="" srcset="">
+            <h2>Porche</h2> -->
         </div>
 
 
          <!-- box 3 -->
-         <div class="box">
+         <!-- <div class="box">
             <img src="{% static 'images/car3.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
-        </div>
+        </div> -->
 
 
          <!-- box 4 -->
-         <div class="box">
+         <!-- <div class="box">
             <img src="{% static 'images/car4.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
-        </div>
+        </div> -->
 
 
          <!-- box 5 -->
-         <div class="box">
+         <!-- <div class="box">
             <img src="{% static 'images/car5.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
-        </div>
+        </div> -->
 
 
          <!-- box 6 -->
-         <div class="box">
+         <!-- <div class="box">
             <img src="{% static 'images/car6.jpg' %}" alt="" srcset="">
             <h2>Porche</h2>
-        </div>
+        </div> -->
     </section>
 
 
@@ -146,8 +178,8 @@
         </div>
         <div class="sobre-texto">
             <span>Sobre nós</span>
-            <h2>preços baixos com <br> carros de qualidade</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores iste, doloremque repellendus amet ipsa natus consequatur fugit excepturi alias est eaque distinctio nesciunt ullam eum aliquid inventore eligendi in?</p>
+            <h2>Preços baixos com <br> carros de qualidade</h2>
+            <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores iste, doloremque repellendus amet ipsa natus consequatur fugit excepturi alias est eaque distinctio nesciunt ullam eum aliquid inventore eligendi in?</p>-->
 
 
             <!-- sobre botão -->
@@ -159,14 +191,14 @@
    
     <section class="partes" id="partes">
         <div class="cabecalho">
-            <span>o que nós oferecemos</span>
-            <h2> nossos carros são exelentes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem  </div>
-        <!-- box1 -->
+            <span>O que nós oferecemos</span>
+            <h2> Nossos carros são exelentes</h2>
+            <p>Peças automotivas para reposição </div>
+       <!--box1--> 
         <div class="partes-container container">
             <div class="box">
                 <img src="{% static 'images/part1.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3>Peças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
@@ -179,7 +211,7 @@
            
             <div class="box">
                 <img src="{% static 'images/part2.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3>Peças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
@@ -192,12 +224,12 @@
        
             <div class="box">
                 <img src="{% static 'images/part3.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3><P></P>eças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
+            </div> 
    
 
 
@@ -205,20 +237,20 @@
          
             <div class="box">
                 <img src="{% static 'images/part4.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3><P></P>eças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
-            </div>
+            </div> 
        
 
 
            <!-- box5 -->
-         
+          
             <div class="box">
                 <img src="{% static 'images/part5.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3>Peças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
@@ -231,14 +263,14 @@
          
             <div class="box">
                 <img src="{% static 'images/part6.png' %}" alt="" srcset="">
-                <h3>peças de reposição automotivas</h3>
+                <h3>Peças de reposição automotivas</h3>
                 <span>$120</span>
                 <i class='bx bxs-star'>(6 Reviews)</i>
                 <a href="#" class="btn">Comprar</a>
                 <a href="#" class="detalhes">Mostar detalhes</a>
             </div>
         </div>
-    </section>
+    </section>  
 
 
     <!-- footer -->

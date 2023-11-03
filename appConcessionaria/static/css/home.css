@@ -26,6 +26,9 @@ img{
     width: 100%;
 }
 
+.h3{
+    background-color: #270101;
+}
 body{
     color: var(--bg-color);
 }
@@ -232,6 +235,7 @@ header.shadow{
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .carros-container .box img:hover{
