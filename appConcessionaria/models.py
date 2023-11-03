@@ -1,6 +1,7 @@
 from django.db import models
 from stdimage.models import StdImageField
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 
 
 '''Signals -> funciona para inserir algo no banco antes ou depois
@@ -39,7 +40,10 @@ def veiculo_pre_save(signal,instance,sender, **kwargs):
         instance.slug = slugify(instance.modelo)
 signals.pre_save.connect(veiculo_pre_save, sender=Veiculo)
 
-# class UserProfile(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     cpf = models.CharField(max_length=20)
-#     profile_picture = models.ImageField(upload_to='profile_pictures/')
+
+class Usuario(models.Model):
+    cpf = models.CharField(unique=True, max_length=11)
+    nome = models.CharField(max_length=255)
+    senha = models.CharField(max_length=128) 
+
+  
