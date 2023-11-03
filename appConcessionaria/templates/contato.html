@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+    <link rel="stylesheet" href="../static/css/contato.css">
 
     <title>Contatos</title>
 </head>
@@ -25,19 +25,19 @@
         <form action="{% url 'contato' %}" method="post" autocomplete="off" class="formContato">
             {% csrf_token %}
             <h1> Deixe aqui seu contato... </h1>
-            <label for="nome">Nome: </label>
+            <label class="label-float"  for="nome">Nome: </label>
             <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="telefone">Telefone: </label>
+            <label class="label-float" for="telefone">Telefone: </label>
             <input type="text" id="telefone" name="telefone" required><br><br>
 
-            <label for="email">Email: </label>
+            <label class="label-float" for="email">Email: </label>
             <input type="email" id="email" name="email" required><br><br>
 
-            <label for="nome">Assunto: </label>
+            <label class="label-float" for="nome">Assunto: </label>
             <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="descricao">Descrição: </label><br>
+            <label class="label-float" for="descricao">Descrição: </label><br>
             <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
 
             <!--<input type="submit" value="Enviar" class="buttun"> -->

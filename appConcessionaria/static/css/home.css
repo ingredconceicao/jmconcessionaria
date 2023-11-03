@@ -340,7 +340,7 @@ header.shadow{
     color: var(--bg-color);
 }
 
-footer{
+.footer{
     background: black;
     color: #f6f6f6;
     border-top: 2px solid var(--bg-color);

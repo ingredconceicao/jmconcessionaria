@@ -1,8 +1,10 @@
 from typing import Any
 from django import forms
 from django.core.mail.message import EmailMessage
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from .models import Veiculo, Usuario
 
-from .models import Veiculo
 class ContatoForm(forms.Form):
 
     nome = forms.CharField(label='nome', max_length=100)
@@ -34,9 +36,27 @@ class  VeiculoModelForm(forms.ModelForm):
         model = Veiculo
         fields =  ['marca', 'modelo', 'quilometragem', 'valor', 'ano', 'estoque', 'condicao','disponivel', 'imagem']
 
-class Usuario(forms.Form):
 
-    nome = forms.CharField(label='nome', max_length=100)
-    cpf = forms.CharField(label='cpf', max_length=100)
-    password = forms.EmailField(label='email', max_length=100)
-    confirmar_passoword = forms.EmailField(label='email', max_length=100)
+class CadastroUsuarioForm(forms.ModelForm):
+
+    senha = forms.CharField(
+        required=False,
+        widget=forms.PasswordInput,
+    )
+    repetir_senha = forms.CharField(
+        required=False,
+        widget=forms.PasswordInput,
+    )
+    class Meta():
+        model = Usuario
+        fields= ('nome', 'cpf', 'senha', 'repetir_senha')
+        
+class User_rigister(forms.ModelForm):
+    class Meta:
+        required = False
+        model = User   
+        fields = ('username',)
+class LoginUsuarioForm(forms.Form):
+     class Meta:
+        model = Usuario
+        fields =  [ 'cpf', 'senha']
