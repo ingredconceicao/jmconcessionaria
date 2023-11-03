@@ -8,5 +8,8 @@ urlpatterns = [
     path('login/', login_page, name='login'),
     path('cadastro/', cadastro, name='cadastro'),
     path('perfil/', perfil, name='perfil'),
-    path('loginVendedor/', loginVendedor, name='loginVendedor'),
+    path('loginVendedor/',loginVendedor, name='loginVendedor'),
+    
+   
+    
 ]

@@ -2,7 +2,7 @@ from typing import Any
 from django import forms
 from django.core.mail.message import EmailMessage
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import Veiculo, Usuario
 
 class ContatoForm(forms.Form):
@@ -12,6 +12,8 @@ class ContatoForm(forms.Form):
     email = forms.EmailField(label='email', max_length=100)
     assunto = forms.CharField(label='assunto', max_length=100)
     descricao = forms.CharField(label='descricao', widget=forms.Textarea())
+
+
 
     # def enviar_email(self):
     #     nome = self.cleaned_data['nome']
@@ -56,3 +58,10 @@ class LoginUsuarioForm(forms.Form):
      class Meta:
         model = Usuario
         fields =  [ 'cpf', 'senha']
+
+# 
+# 
+
+class LoginVendedorForm(forms.Form):
+    cpf = forms.CharField(max_length=11)
+    password = forms.CharField(widget=forms.PasswordInput)

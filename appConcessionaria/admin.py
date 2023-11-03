@@ -16,3 +16,4 @@ class VeiculoAdmin(admin.ModelAdmin):
         "slug",
         "disponivel",
     )
+

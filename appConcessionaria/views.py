@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ContatoForm, VeiculoModelForm, LoginUsuarioForm ,User_rigister
+from .forms import ContatoForm, VeiculoModelForm, LoginUsuarioForm ,User_rigister, LoginVendedorForm
 from .models import Veiculo
-from django.contrib.auth import login,authenticate
-
+from django.contrib.auth import login,authenticate, login
+from django.contrib.auth.views import LoginView
 from django.contrib.auth.models import User
+
+
+
 
 
 # Create your views here.
@@ -18,6 +21,9 @@ def home(request):
 
 def carros(request):
     return render(request, 'carros.html')
+
+def inserirVeiculo(request):
+    return render(request, 'perfil_vendedor.html')
 
 def contato(request):
 
@@ -79,7 +85,7 @@ def cadastro(request):
         save_usuario.set_password(senha)
         save_usuario.save()
         form.save()
-
+        return redirect('login')
     return render(request, 'cadastro.html')
     
 
@@ -106,22 +112,20 @@ def perfil(request):
     return render(request, 'perfil_vendedor.html', context)
 
 def loginVendedor(request):
-    if str(request.method) == 'POST':
-        email = request.POST.get('email').lower()
+   
+    if request.method == 'POST':
+        form = LoginVendedorForm(request.POST)
+        if form.is_valid():
+            cpf = form.cleaned_data['cpf']
+            password = form.cleaned_data['password']
+            user = authenticate(request, cpf=cpf, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('perfil_vendedor.html')  # Redirecione para a página após o login
+    else:
+        form = LoginVendedorForm()
 
-        password = request.POST.get('password')
-        if not email or not password:
-            return redirect('homepage:homepage')
+    return render(request, 'login.html', {'form': form})
 
-        usuario = authenticate(
-            request, username=email, password=password)
-        if not usuario:
-            return redirect('homepage:homepage')
-
-        login(request, user=usuario)
-        return render(request, 'carros.html')
-
-
-     
-    return render(request, 'login_f.html')
+    
 

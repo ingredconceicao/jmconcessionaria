@@ -1,6 +1,6 @@
 from django.db import models
 from stdimage.models import StdImageField
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from django.contrib.auth.hashers import make_password
 
 
@@ -43,3 +43,13 @@ signals.pre_save.connect(veiculo_pre_save, sender=Veiculo)
 
 class Usuario(models.Model):
     cpf = models.CharField(unique=True, max_length=11)
+
+
+
+# 
+# 
+class CustomUser(AbstractUser):
+    cpf = models.CharField(max_length=11, unique=True)
+
+    def __str__(self):
+        return self.username

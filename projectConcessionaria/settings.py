@@ -164,6 +164,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'appConcessionaria.CustomUser'  # Substitua 'seu_app' pelo nome do seu aplicativo
+AUTHENTICATION_BACKENDS = ['appConcessionaria.backends.CPFBackend']  # Substitua 'seu_app' pelo nome do seu aplicativo
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

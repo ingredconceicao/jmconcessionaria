@@ -8,7 +8,9 @@
 </head>
 <body>
    <div class="login-container">
-      <form action="" class="form-login">
+      <form action="" class="form-login" method="post" name="formLoginVendedor" action="/doLoginVendedor"> 
+        {% csrf_token %}
+        
           <ul class="login-nav">
               <li class="login-nav__item active">
                   <a href="#">Login Vendedor </a>
@@ -16,13 +18,13 @@
               
           </ul>
           <label for="login-input-user" class="login__label">
-              Email
+              CPF
           </label>
-          <input id="login-input-user" class="login__input" type="text" />
+          <input id="login-input-user" class="login__input" type="text"  name="cpf"/>
           <label for="login-input-password" class="login__label">
               Senha
           </label>
-          <input id="login-input-password" class="login__input" type="password" />
+          <input id="login-input-password" class="login__input" type="password" name="password"/>
           <label for="login-sign-up" class="login__label--checkbox">
               <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
               Manter conectado
